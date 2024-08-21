@@ -4,6 +4,8 @@ Scripts for preprocessing , inferencing and finetuning the most popular [amul ma
 
 ### preprocessing
 https://github.com/sanjay7178/amul-mascot-girl-flux-t2i/blob/main/amul_mascot_girl_preprocess.ipynb
+### dataset
+https://huggingface.co/datasets/sanjay7178/amul-mascot-girl
 ### finetuning
 coming soon ..
 ### inference (gradio demo)
