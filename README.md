@@ -9,10 +9,9 @@ https://huggingface.co/datasets/sanjay7178/amul-mascot-girl
 ### finetuning
 coming soon ..
 ### inference (gradio demo)
-coming soon ..
+https://github.com/sanjay7178/amul-mascot-girl-flux-t2i/tree/main/lora-gradio-demo
 ### results
-
-#### Loss Plot
+###### Loss Plot
 <a href="url"><img src="https://github.com/user-attachments/assets/59177225-78cc-4963-9698-798aa5fdadfc" align="left" height="400" width="1000" ></a>
 
 ### benchmarks 
