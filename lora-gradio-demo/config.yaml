@@ -1,0 +1,69 @@
+job: extension
+config:
+  name: amul_mascot_girl_flux_lora_v1_fp16
+  process:
+  - type: sd_trainer
+    training_folder: output/amul_mascot_girl
+    performance_log_every: 1000
+    device: cuda:0
+    log_dir: ../logs
+    trigger_word: amul girl
+    network:
+      type: lora
+      linear: 32
+      linear_alpha: 32
+    save:
+      dtype: float16
+      save_every: 250
+      max_step_saves_to_keep: 4
+      push_to_hub: true
+    hf_repo_id: sanjay7178/amul_mascot_girl_flux_lora_v1_fp16
+    datasets:
+    - folder_path: /home/ubuntu/amul/dataset2/amul_data
+      caption_ext: txt
+      caption_dropout_rate: 0.05
+      shuffle_tokens: false
+      cache_latents_to_disk: true
+      resolution:
+      - 512
+      - 768
+      - 1024
+      - 2048
+    train:
+      batch_size: 30
+      steps: 500
+      gradient_accumulation_steps: 1
+      train_unet: true
+      train_text_encoder: false
+      gradient_checkpointing: true
+      noise_scheduler: flowmatch
+      optimizer: adamw8bit
+      lr: 0.0001
+      ema_config:
+        use_ema: true
+        ema_decay: 0.99
+      dtype: bf16
+    model:
+      name_or_path: black-forest-labs/FLUX.1-dev
+      is_flux: true
+      quantize: true
+    sample:
+      sampler: flowmatch
+      sample_every: 250
+      width: 1024
+      height: 1024
+      prompts:
+      - amul girl - M. Karunanidhi eminant DMK leader, writer and Amul Butter.
+      - amul girl - When helmets were made compulsory in Bombay
+      neg: ''
+      seed: 42
+      walk_seed: true
+      guidance_scale: 4
+      sample_steps: 20
+    logging:
+      log_every: 10
+      use_wandb: true
+      verbose: false
+meta:
+  name: '[amul_mascot_girl_flux_lora_v1_fp16]'
+  version: '1.0'
