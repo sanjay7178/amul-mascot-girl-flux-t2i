@@ -8,7 +8,7 @@ sdk_version: 4.41.0
 app_file: app.py
 pinned: true
 thumbnail: >-
-  https://cdn-uploads.huggingface.co/production/uploads/6456f3ca1ca9debab0554f8b/vGOpoUVNqTnTA_P3GU35r.webp
+ https://github.com/sanjay7178/amul-mascot-girl-flux-t2i/blob/main/lora-gradio-demo/1724420520600__000000500_1.jpg?raw=true
 short_description: FLUX.1 RealismLora
 ---
 
