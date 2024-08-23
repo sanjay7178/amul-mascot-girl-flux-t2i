@@ -11,7 +11,10 @@ coming soon ..
 ### inference (gradio demo)
 coming soon ..
 ### results
-coming soon ..
+
+#### Loss Plot
+<a href="url"><img src="https://github.com/user-attachments/assets/59177225-78cc-4963-9698-798aa5fdadfc" align="left" height="400" width="1000" ></a>
+
 ### benchmarks 
 coming soon ..
 
